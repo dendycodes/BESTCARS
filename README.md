@@ -1,6 +1,6 @@
 # BESTCARS
 
- ## BESTCARS is a online store for autoparts. <br/> 
+ BESTCARS is a online store for autoparts. <br/> 
  Тhe application allows the user to easily find the autopart <br/> which he is looking for and easily orders.
 
 
