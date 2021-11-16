@@ -4,4 +4,4 @@
   Тhe application allows the user to easily find the autopart <br/> which he is looking for and easily orders.
   </p>
 
-<img src="https://res.cloudinary.com/bestcar-bg/image/upload/v1637093308/Deniz%20Memduev/store_ii4wp3.png" style="border-radius:10px" />
+<img src="https://res.cloudinary.com/bestcar-bg/image/upload/v1637093308/Deniz%20Memduev/store_ii4wp3.png" style="border: 4px solid white;" />
