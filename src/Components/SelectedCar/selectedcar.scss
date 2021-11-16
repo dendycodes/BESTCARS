@@ -1,0 +1,94 @@
+@import "../../App.scss";
+.selectedcar {
+  right: 15px;
+  z-index: 999;
+  width: 400px;
+  background-color: transparent;
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  transition: ease-in-out 0.5s;
+  #img-sa {
+    position: absolute;
+    right: 20px;
+  }
+  .content {
+    width: 100%;
+    padding: 1px;
+    background-color: $appColor;
+    position: absolute;
+    top: 25px;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 5px 15px -10px rgba(0, 0, 0, 0.72);
+    box-shadow: 3px 5px 15px -10px rgba(0, 0, 0, 0.72);
+  }
+  display: none;
+  .selected-car {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-size: small;
+    font-weight: 400;
+    justify-content: space-around;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+
+    .car-header {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    hr {
+      width: 95%;
+      height: 1px;
+    }
+    .car-details {
+      width: 95%;
+      padding: 10px 0px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row;
+      line-height: 23px;
+
+      b {
+        width: 50%;
+        height: 100%;
+      }
+    }
+
+    #selected-car-icon {
+      height: 100%;
+      padding: 5px 5px;
+      border-radius: 10px;
+      // margin-right: 20px;
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    #cancel-car {
+      font-size: 10px;
+      margin: 5px;
+      color: $appColor;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.open {
+  display: block;
+}

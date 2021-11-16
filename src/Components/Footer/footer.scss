@@ -1,0 +1,131 @@
+@import "../../App.scss";
+
+.footer {
+  // height: 500px;
+  width: 100%;
+  position: relative;
+  background-color: $back;
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    max-width: 1130px !important;
+  }
+
+  #footer-catcher {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0px 150px 0px;
+  }
+  .content {
+    width: 23%;
+    // background-color: rgb(73, 73, 73);
+    height: 250px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    // background-color: blanchedalmond;
+    p,
+    li {
+      font-size: medium;
+      color: rgb(163, 163, 163);
+      &:hover {
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    .social-networks {
+      margin: 30px 0px 0px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 240px;
+      .network {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: rgb(85, 85, 85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: ease-in-out 0.5s;
+        &:hover {
+          background-color: $appColor;
+        }
+      }
+    }
+
+    .list {
+      list-style: none;
+      height: 77%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+
+    .posts {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row;
+      height: 40%;
+      width: 100%;
+      img {
+        width: 90px;
+        height: 90px;
+        margin-right: 5px;
+      }
+      p {
+        font-size: medium;
+      }
+    }
+
+    .subscribe {
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+
+      #in-text {
+        width: 100%;
+        padding: 10px;
+        font-size: larger;
+        border-radius: 5px;
+        border: none;
+        outline: $appColor;
+      }
+      #in-submit {
+        width: 100%;
+        padding: 10px;
+        font-size: large;
+        border-radius: 5px;
+        background-color: $appColor;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .end {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(44, 44, 44);
+    bottom: 0;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../App.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#spinner {
+  background-color: transparent;
+  min-width: 160px;
+  min-height: 160px;
+  border: 10px solid rgba(255, 255, 255, 0.1);
+  border-right: 5px solid $appColor;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}

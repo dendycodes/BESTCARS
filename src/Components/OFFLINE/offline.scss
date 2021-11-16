@@ -1,0 +1,20 @@
+.no-internet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#loading-header {
+  color: white;
+  margin: 10px;
+  font-size: 70px;
+}
+
+#loading-message {
+  color: white;
+  margin: 30px;
+}

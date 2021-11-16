@@ -1,0 +1,181 @@
+@import "../../App.scss";
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif !important;
+  text-decoration: none;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 345px;
+  position: relative;
+  height: 29.5em;
+  // perspective: 150em;
+  padding: 0%;
+
+  &__description {
+    text-transform: uppercase;
+    // border: 1px solid #bebebe;
+    width: 100%;
+    -webkit-box-shadow: 0px 10px 21px -12px #000000;
+    box-shadow: 0px 10px 21px -12px #000000;
+    border-radius: 10px;
+    background: rgb(87, 91, 97);
+    // box-shadow: 5px 5px 4px #e3e3e3, -5px -5px 4px #ffffff;
+    height: 430px;
+    overflow: hidden;
+    padding: 0px;
+
+    svg {
+      width: 1.5em;
+      height: 1.5em;
+      fill: #fff;
+    }
+  }
+}
+
+.badge {
+  position: absolute;
+  left: 0;
+  top: 35px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  background: $appColor;
+  color: #fff;
+  padding: 3px 10px;
+}
+
+.product-tumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(87, 91, 97);
+  // -webkit-box-shadow: inset 0px 0px 23px -17px #000000;
+  // box-shadow: inset 0px 0px 23px -17px #000000;
+  border-bottom: 2px solid $appColor;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.product-tumb img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.product-details {
+  padding: 25px;
+  position: relative;
+}
+
+.product-details h4 a {
+  font-weight: 500;
+  display: block;
+
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+  position: absolute;
+  top: 20px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  width: 85%;
+}
+#header {
+  margin-top: 45px;
+}
+
+.product-bottom-details {
+  overflow: hidden;
+  border-top: 1px solid rgb(228, 228, 228);
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  position: absolute;
+  bottom: -115px;
+  width: 85%;
+  height: 90px;
+}
+
+.product-price {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  width: 100%;
+}
+
+.product-price small {
+  font-size: 80%;
+  font-weight: 400;
+  text-decoration: line-through;
+  display: inline-block;
+  margin-right: 5px;
+  color: $appColor;
+}
+
+.product-links {
+  text-align: right;
+}
+
+.product-links a {
+  display: inline-block;
+  margin-left: 5px;
+  color: #e1e1e1;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  webkit-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+
+.add-to-cart {
+  width: 120px;
+  height: 50px;
+  position: absolute;
+  right: -16px;
+  top: -48px;
+  z-index: 2;
+  background: $appColor;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  transition: all 0.2s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.btn-wrapper {
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+  transform: translate(0%, 0%);
+}
+
+.btn-text {
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+}
