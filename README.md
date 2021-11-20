@@ -17,8 +17,8 @@
  -   Easy ordering.
  -   
 ### Used Technologies
-  - ReactJS 
-  - Express
+  - React.js 
+  - Express.js (REST API)
   - MongoDB
 
 
