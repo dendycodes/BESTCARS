@@ -17,9 +17,9 @@
  -   Easy ordering.
  -   
 ### Used Technologies
-  - ## ReactJS 
-  - ## Express
-  - ## MongoDB
+  - ReactJS 
+  - Express
+  - MongoDB
 
 
 
