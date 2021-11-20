@@ -1,13 +1,13 @@
 ## BESTCARS
-
+Online store for autoparts
 
 
 <img src="https://res.cloudinary.com/bestcar-bg/image/upload/v1637420109/Deniz%20Memduev/299-2996011_monitor-png-ipad-computer-monitors-software-jpg-computer_gwlh5v.png" width="500"  />
 <hr/>
-  Online store for autoparts
+  
 
-    ### Main Futures
-
+   
+ ### Main futures
 
  -   Easy adding and deleting car from garage.
  -   Searching for auto parts by selected category and car added to garage.
