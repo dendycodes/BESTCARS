@@ -20,9 +20,12 @@
   - React.js | Hooks | Routing  
   - Express.js (REST API)
   - MongoDB
+  - 
+  <br/>
   
-  
-#### Run the app 
+### Run the app 
+
+#### Clone the app: 
   `$ git clone git@github.com:denizmemduev/BESTCARS.git`
 
 #### To install all dependenciesrun: 
