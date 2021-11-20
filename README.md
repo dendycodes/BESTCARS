@@ -15,7 +15,11 @@
  -   Adding products to the cart.
  -   Easy updating the quantity of products in the cart and deleting.
  -   Easy ordering.
-
+ -   
+### Used Technologies
+  - ## ReactJS 
+  - ## Express
+  - ## MongoDB
 
 
 
