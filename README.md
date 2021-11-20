@@ -1,9 +1,4 @@
 # BESTCARS
-![GitHub repo size](https://img.shields.io/github/repo-size/denizmemduev/BESTCARS?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/denizmemduev/BESTCARS?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/denizmemduev/BESTCARS?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/denizmemduev/BESTCARS?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/denizmemduev/BESTCARS?style=for-the-badge)
 
 
 
