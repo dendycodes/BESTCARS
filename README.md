@@ -1,9 +1,9 @@
 # BESTCARS
-![GitHub repo size](https://img.shields.io/github/repo-size/iuricode/README-template?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/iuricode/README-template?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/iuricode/README-template?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/iuricode/README-template?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/iuricode/README-template?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/denizmemduev/BESTCARS?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/denizmemduev/BESTCARS?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/denizmemduev/BESTCARS?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/denizmemduev/BESTCARS?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/denizmemduev/BESTCARS?style=for-the-badge)
 
 <h5>
  BESTCARS is a online store for autoparts. <br/> 
