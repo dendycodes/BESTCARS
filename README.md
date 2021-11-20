@@ -16,13 +16,12 @@
  -   Easy updating the quantity of products in the cart and deleting.
  -   Easy ordering.
  
- 
 ### Used Technologies
   - React.js | Hooks | Routing  
   - Express.js (REST API)
   - MongoDB
-  
-  <br/>
+
+  <hr/>
   
 ### Run the app 
 
