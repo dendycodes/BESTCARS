@@ -16,7 +16,7 @@
  -   Searching for auto parts by selected category and car added to garage.
  -   Searching by typed product name and  car added to garage.
  -   Adding products to the cart.
- -   Easy updating the quantity of products in the cart and deleting.
+ -   Easy updating the quantity of products from the cart and deleting.
  -   Easy ordering.
  
 ### Used Technologies
