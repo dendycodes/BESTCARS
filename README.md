@@ -22,11 +22,12 @@
   - MongoDB
   
   
-### Run the app 
- *$ git clone git@github.com:denizmemduev/BESTCARS.git
+#### Run the app 
+  `$ git clone git@github.com:denizmemduev/BESTCARS.git`
 
-To install all dependenciesrun: 
- *npm install 
-To start the apprun: 
-*npm start
+#### To install all dependenciesrun: 
+  `npm install`
+
+#### To start the apprun: 
+ `npm start`
 
