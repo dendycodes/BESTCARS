@@ -6,8 +6,9 @@
 <hr/>
   
 
-   
- ### Main futures
+ 
+ 
+ ### Main futures | The project is under development 
 
  -   Easy adding and deleting car from garage.
  -   Searching for auto parts by selected category and car added to garage.
