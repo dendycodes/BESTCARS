@@ -20,7 +20,7 @@
   - React.js | Hooks | Routing  
   - Express.js (REST API)
   - MongoDB
-  - 
+  
   <br/>
   
 ### Run the app 
