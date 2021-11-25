@@ -84,10 +84,10 @@ export default function Navbar() {
                   }}
                   id="cars-quantity"
                 >
-                  1
+                  {carsquantity}
                 </div>
               ) : (
-                <div className="zero">0</div>
+                <div className="zero"> {carsquantity}</div>
               )}
 
               <div onClick={hamburgerState} className={"btn " + active}>

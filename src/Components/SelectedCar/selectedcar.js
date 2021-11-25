@@ -5,7 +5,7 @@ import { slectedCar } from "../../Globalselectedcar";
 import { globalState } from "../../Globalstate";
 import { Link } from "react-router-dom";
 export default function Selectedcar() {
-  const [/*carsquantity,*/ setCarsquantity] = useContext(globalState);
+  const [carsquantity, setCarsquantity] = useContext(globalState);
   const [selectedcar, setSelectedcar] = useContext(slectedCar);
 
   return (

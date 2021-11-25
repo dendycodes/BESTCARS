@@ -2,13 +2,13 @@ import React, { useState, createContext, useEffect } from "react";
 
 export const globalState = createContext();
 export const Globalstate = (props) => {
-  const [globalstate, setGlobalstate] = useState();
+  const [globalstate, setGlobalstate] = useState(
+    JSON.parse(localStorage.getItem("garage")) || 0
+  );
 
   useEffect(() => {
-    if (localStorage.getItem("selectedCar")) {
-      setGlobalstate(1);
-    }
-  }, []);
+    localStorage.setItem("garage", globalstate);
+  }, [globalstate]);
 
   // console.log(globalstate);
   return (
