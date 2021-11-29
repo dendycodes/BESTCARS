@@ -6,9 +6,11 @@ import Icon from "@mdi/react";
 import Minicart from "../Minicart/minicart";
 import Selectedcar from "../SelectedCar/selectedcar";
 import { globalState } from "../../Globalstate";
+import { cartState } from "../../CartContext";
 export default function Navbar() {
   const [active, setActive] = useState("not-active");
   const [carsquantity /*setCarsquantity*/] = useContext(globalState);
+  const [cart, setCart] = useContext(cartState);
 
   const hamburgerState = () => {
     if (active === "not-active") {
@@ -51,7 +53,7 @@ export default function Navbar() {
                 src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png"
               />
 
-              {JSON.parse(localStorage.getItem("selectedCars")) ? (
+              {cart.length > 0 ? (
                 <div
                   onClick={() => {
                     document
@@ -59,7 +61,10 @@ export default function Navbar() {
                       .classList.toggle("open");
                   }}
                   id="cart-quantity"
-                ></div>
+                >
+                  {" "}
+                  {cart.length}
+                </div>
               ) : (
                 <div className="zero">0</div>
               )}

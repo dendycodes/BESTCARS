@@ -35,9 +35,7 @@ export default function Card(props) {
             <div className="btn-wrapper">
               <button
                 //Adding items to the cart
-                onClick={() => {
-                  // setGlobalstate({ name: "denrdsaewizffsedfsdf" });
-                }}
+                onClick={props.addtocart}
                 className="add-to-cart"
               >
                 <div className="btn-text">Add to cart</div>

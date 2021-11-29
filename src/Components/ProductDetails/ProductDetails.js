@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./ProductDetails.scss";
-
+import { cartState } from "../../CartContext";
 import axios from "axios";
 import Loading from "../Loading/loading";
 import Notfound from "../NotFound/notfound";
@@ -9,6 +9,7 @@ export default function ProductDetails() {
   const [partdetails, setPartdetails] = useState([{ product: "none" }]);
   const [loadingstatus, setLoadingstatus] = useState(false);
   const [quantity, setQuantity] = useState(1);
+  const [cart, setCart] = useContext(cartState);
 
   useEffect(() => {
     setLoadingstatus(true);
@@ -90,7 +91,28 @@ export default function ProductDetails() {
                 >
                   +
                 </button>
-                <button id="add"> Add to cart</button>
+                <button
+                  id="add"
+                  onClick={() => {
+                    setCart(() => {
+                      return [
+                        ...cart,
+                        {
+                          productID: 234,
+                          productName: partdetails[0].autoPartName,
+                          price: partdetails[0].price,
+                          quantity: quantity,
+                          productPictureURL: partdetails[0].pictureURL
+                        }
+                      ];
+                    });
+                    alert("Succesfully added to cart");
+                    setQuantity(1);
+                  }}
+                >
+                  {" "}
+                  Add to cart
+                </button>
               </div>
             </div>
           </div>

@@ -7,10 +7,12 @@ import "./categorydetails.scss";
 import Notfound from "../NotFound/notfound";
 import Loading from "../Loading/loading";
 import { slectedCar } from "../../Globalselectedcar";
+import { cartState } from "../../CartContext";
 export default function Categorydetails() {
   const [autoparts, setAutoparts] = useState([{ part: "none" }]);
   const [loadingstatus, setLoadingstatus] = useState(false);
   const [selectedcar /*setSelectedcar*/] = useContext(slectedCar);
+  const [cart, setCart] = useContext(cartState);
 
   useEffect(() => {
     setLoadingstatus(true);
@@ -56,6 +58,21 @@ export default function Categorydetails() {
                       price={part.price}
                       infoDetail={part.infoDetail}
                       partNumber={part.partNumber}
+                      addtocart={() => {
+                        setCart(() => {
+                          return [
+                            ...cart,
+                            {
+                              productID: part._id,
+                              productName: part.autoPartName,
+                              price: part.price,
+                              quantity: 1,
+                              productPictureURL: part.pictureURL
+                            }
+                          ];
+                        });
+                        alert("Succesfully added to cart");
+                      }}
                     />
                   );
                 })}
