@@ -15,20 +15,20 @@
   }
   .content {
     width: 100%;
-    padding: 1px;
+    padding: 3px 2px 2px 2px;
     background-color: $appColor;
-    position: absolute;
+    position: relative;
     top: 25px;
     border-radius: 10px;
-    -webkit-box-shadow: 3px 5px 15px -10px rgba(0, 0, 0, 0.72);
-    box-shadow: 3px 5px 15px -10px rgba(0, 0, 0, 0.72);
+    -webkit-box-shadow: 0px 13px 43px -9px #000000;
+    box-shadow: 0px 13px 43px -9px #000000;
   }
   display: none;
   .selected-car {
     width: 100%;
     position: relative;
     overflow: hidden;
-    padding: 10px 10px;
+    padding: 10px 10px 40px 10px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -77,15 +77,41 @@
       }
     }
     #cancel-car {
-      font-size: 10px;
-      margin: 5px;
-      color: $appColor;
-      cursor: pointer;
+      position: absolute;
+      bottom: 0px;
 
+      font-size: small;
+      height: 30px;
+      cursor: pointer;
+      background-color: rgb(58, 58, 58);
+      color: rgb(175, 175, 175);
+      width: 100%;
+      text-transform: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
       &:hover {
         text-decoration: underline;
+        color: white;
       }
     }
+  }
+  .no-selected-car {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-size: small;
+    font-weight: 400;
+    justify-content: space-between;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
   }
 }
 

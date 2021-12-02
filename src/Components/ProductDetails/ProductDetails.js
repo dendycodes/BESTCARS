@@ -4,12 +4,14 @@ import { cartState } from "../../CartContext";
 import axios from "axios";
 import Loading from "../Loading/loading";
 import Notfound from "../NotFound/notfound";
+import { slectedCar } from "../../Globalselectedcar";
 
 export default function ProductDetails() {
   const [partdetails, setPartdetails] = useState([{ product: "none" }]);
   const [loadingstatus, setLoadingstatus] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [cart, setCart] = useContext(cartState);
+  const [selectedcar /*setSelectedcar*/] = useContext(slectedCar);
 
   useEffect(() => {
     setLoadingstatus(true);
@@ -71,6 +73,9 @@ export default function ProductDetails() {
                 <small> {partdetails[0].price + 14.03}</small>
                 <h1>{partdetails[0].price} BGN</h1>
               </div>
+              <p>
+                с вкл. ДДС 20%, <br /> без разходи за доставка (Цена за брой)
+              </p>
 
               <div className="add-to-cart2">
                 <button
@@ -98,11 +103,12 @@ export default function ProductDetails() {
                       return [
                         ...cart,
                         {
-                          productID: 234,
+                          productID: partdetails[0]._id,
                           productName: partdetails[0].autoPartName,
                           price: partdetails[0].price,
                           quantity: quantity,
-                          productPictureURL: partdetails[0].pictureURL
+                          productPictureURL: partdetails[0].pictureURL,
+                          selectedcar: selectedcar
                         }
                       ];
                     });

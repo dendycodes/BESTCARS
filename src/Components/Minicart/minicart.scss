@@ -2,7 +2,7 @@
 .minicart {
   right: 15px;
   z-index: 999;
-  width: 350px;
+  width: 450px;
   background-color: transparent;
   position: absolute;
   display: flex;
@@ -15,34 +15,67 @@
     right: 65px;
   }
   .content {
-    overflow: hidden;
     width: 100%;
-    height: 500px;
-    background-color: rgb(255, 255, 255);
+    height: 600px;
+    padding: 3px 2px 20px 2px;
+    background-color: $appColor;
     position: absolute;
     top: 25px;
     border-radius: 10px;
-    -webkit-box-shadow: 3px 5px 15px -10px rgba(0, 0, 0, 0.72);
-    box-shadow: 3px 5px 15px -10px rgba(0, 0, 0, 0.72);
+    -webkit-box-shadow: 0px 13px 43px -9px #000000;
+    box-shadow: 0px 13px 43px -9px #000000;
+    position: relative;
+
+    .cart-title {
+      position: absolute;
+      width: 99%;
+      height: 30px;
+      bottom: 2px;
+      background-color: rgb(58, 58, 58);
+      color: rgb(175, 175, 175);
+      border-radius: 0px 0px 10px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: small;
+      transition: ease-in-out 0.3s;
+      &:hover {
+        color: white;
+      }
+    }
+
     .pdct-box {
       width: 100%;
       height: 100%;
       padding: 5px;
       overflow-y: scroll;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
       .pdct {
         width: 100%;
         border-bottom: 1px solid rgb(207, 207, 207);
-        height: 100px;
-
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: space-around;
         flex-direction: row;
         margin-bottom: 5px;
         padding: 5px;
+        div {
+          width: 50%;
+          line-height: 25px;
+        }
+
         .pdct-img {
           height: 90px;
           width: 90px;
+        }
+        .rmv-item {
+          opacity: 0.7;
+          cursor: pointer;
+          &:hover {
+            opacity: 1;
+          }
         }
       }
     }

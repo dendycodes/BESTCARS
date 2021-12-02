@@ -63,22 +63,25 @@
       align-items: flex-end;
       justify-content: flex-end;
       flex-direction: column;
-
+      text-align: end;
       .price-container {
         display: flex;
         align-items: center;
         justify-content: center;
 
         h1 {
-          font-size: 30px;
+          font-size: 40px;
           margin: 15px;
         }
         small {
-          font-size: 20px;
+          font-size: 30px;
           font-weight: 400;
           text-decoration: line-through;
           color: rgb(179, 179, 179);
         }
+      }
+      p {
+        padding: 10px;
       }
 
       .add-to-cart2 {

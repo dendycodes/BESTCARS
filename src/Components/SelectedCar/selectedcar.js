@@ -105,11 +105,11 @@ export default function Selectedcar() {
                 to="/store"
               >
                 {" "}
-                <b>ИЗБЕРИ ДРУГ АВТОМОБИЛ</b>
+                Избери друг автомобил
               </Link>
             </div>
           ) : (
-            <div className="selected-car"> Няма избран автомобил </div>
+            <div className="no-selected-car"> Няма избран автомобил </div>
           )}
         </div>
       </div>

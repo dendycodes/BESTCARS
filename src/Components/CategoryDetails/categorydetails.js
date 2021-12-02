@@ -67,7 +67,8 @@ export default function Categorydetails() {
                               productName: part.autoPartName,
                               price: part.price,
                               quantity: 1,
-                              productPictureURL: part.pictureURL
+                              productPictureURL: part.pictureURL,
+                              selectedcar: selectedcar
                             }
                           ];
                         });

@@ -29,8 +29,8 @@ export default function Card(props) {
 
           <div className="product-bottom-details">
             <div className="product-price">
-              <small>{props.price + 14.03} </small>
-              {props.price} BGN
+              <small>{(props.price + 14.03).toFixed(2)} </small>
+              {(0 + props.price).toFixed(2)} BGN
             </div>
             <div className="btn-wrapper">
               <button
