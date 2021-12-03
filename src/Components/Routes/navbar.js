@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
 import { mdiMagnify } from "@mdi/js";
@@ -11,6 +11,16 @@ export default function Navbar() {
   const [active, setActive] = useState("not-active");
   const [carsquantity /*setCarsquantity*/] = useContext(globalState);
   const [cart, setCart] = useContext(cartState);
+
+  const [opened, setOpened] = useState("");
+
+  useEffect(() => {
+    if (opened) {
+      document.getElementById("minicart").classList.remove("open");
+      document.getElementById("selectedcar").classList.remove("open");
+      document.getElementById(opened).classList.toggle("open");
+    }
+  }, [opened]);
 
   const hamburgerState = () => {
     if (active === "not-active") {
@@ -45,17 +55,19 @@ export default function Navbar() {
             </div>
             <div className="navigation-rightside">
               <img
-                alt="cart-icon"
-                className="cart-icon"
                 onClick={() => {
+                  setOpened("minicart");
                   document.getElementById("minicart").classList.toggle("open");
                 }}
+                alt="cart-icon"
+                className="cart-icon"
                 src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png"
               />
 
               {cart.length > 0 ? (
                 <div
                   onClick={() => {
+                    setOpened("minicart");
                     document
                       .getElementById("minicart")
                       .classList.toggle("open");
@@ -71,6 +83,7 @@ export default function Navbar() {
 
               <img
                 onClick={() => {
+                  setOpened("selectedcar");
                   document
                     .getElementById("selectedcar")
                     .classList.toggle("open");
@@ -83,6 +96,7 @@ export default function Navbar() {
               {carsquantity === 1 ? (
                 <div
                   onClick={() => {
+                    setOpened("selectedcar");
                     document
                       .getElementById("selectedcar")
                       .classList.toggle("open");

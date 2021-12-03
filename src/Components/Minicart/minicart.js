@@ -4,6 +4,13 @@ import { cartState } from "../../CartContext";
 
 export default function Cinicart() {
   const [cart, setCart] = useContext(cartState);
+
+  const removeItem = (targetIndex) => {
+    setCart((setCart) => {
+      return cart.filter((item, index) => index !== targetIndex);
+    });
+  };
+
   return (
     <>
       <div className="minicart" id="minicart">
@@ -40,7 +47,7 @@ export default function Cinicart() {
         <div className="content">
           <div className="cart-title"> Виж детайли и финализирай поръчката</div>
           <div className="pdct-box">
-            {cart.map((product) => {
+            {cart.map((product, index) => {
               return (
                 <div className="pdct">
                   <img className="pdct-img" src={product.productPictureURL} />
@@ -66,6 +73,8 @@ export default function Cinicart() {
                     <b> {product.quantity}бр. </b>{" "}
                   </p>
                   <img
+                    onClick={() => removeItem(index)}
+                    key={index}
                     className="rmv-item"
                     src="https://img.icons8.com/ios-glyphs/30/000000/macos-close.png"
                   />
