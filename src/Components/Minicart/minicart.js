@@ -54,19 +54,15 @@ export default function Cinicart() {
 
                   <div>
                     <p>
-                      {product.productName} <br />
                       <b>
-                        {" "}
-                        {product.selectedcar[0].makeName +
-                          "  " +
-                          product.selectedcar[1].modelName}{" "}
-                      </b>
+                        {product.productName} <br />{" "}
+                      </b>{" "}
+                      {product.selectedcar[0].makeName +
+                        "  " +
+                        product.selectedcar[1].modelName}{" "}
                     </p>
 
-                    <h3>
-                      {" "}
-                      {(product.price * product.quantity).toFixed(2)} BGN{" "}
-                    </h3>
+                    <p> {(product.price * product.quantity).toFixed(2)} BGN </p>
                   </div>
                   <p>
                     {" "}

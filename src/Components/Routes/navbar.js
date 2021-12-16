@@ -7,12 +7,13 @@ import Minicart from "../Minicart/minicart";
 import Selectedcar from "../SelectedCar/selectedcar";
 import { globalState } from "../../Globalstate";
 import { cartState } from "../../CartContext";
+import Searchbar from "../Searchbar/searchbar";
 export default function Navbar() {
   const [active, setActive] = useState("not-active");
   const [carsquantity /*setCarsquantity*/] = useContext(globalState);
   const [cart, setCart] = useContext(cartState);
-
   const [opened, setOpened] = useState("");
+  const [searchstate, setSearchstate] = useState("closedSearchbar");
 
   useEffect(() => {
     if (opened) {
@@ -35,10 +36,16 @@ export default function Navbar() {
       <div className="Navbar">
         <div className="container">
           <div className="content">
-            <h1>BESTCARS</h1>
+            <h1 id="title">BESTCARS</h1>
             <div id="search" className="search">
               <form>
                 <input
+                  onFocus={() => {
+                    setSearchstate("Searchbar");
+                  }}
+                  onBlur={() => {
+                    setSearchstate("closedSearchbar");
+                  }}
                   placeholder="Търсене по име на продукт"
                   type="text"
                   spellCheck="false"
@@ -54,60 +61,57 @@ export default function Navbar() {
               />
             </div>
             <div className="navigation-rightside">
-              <img
-                onClick={() => {
+              <div
+                tabIndex="1"
+                onFocus={() => {
                   setOpened("minicart");
-                  document.getElementById("minicart").classList.toggle("open");
+                  document.getElementById("minicart").classList.add("open");
                 }}
-                alt="cart-icon"
-                className="cart-icon"
-                src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png"
-              />
+                onBlur={() => {
+                  setOpened("minicart");
+                  document.getElementById("minicart").classList.remove("open");
+                }}
+              >
+                {" "}
+                <img
+                  alt="cart-icon"
+                  className="cart-icon"
+                  src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png"
+                />
+                {cart.length > 0 ? (
+                  <div id="cart-quantity"> {cart.length}</div>
+                ) : (
+                  <div className="zero">0</div>
+                )}{" "}
+                <Minicart />
+              </div>
 
-              {cart.length > 0 ? (
-                <div
-                  onClick={() => {
-                    setOpened("minicart");
-                    document
-                      .getElementById("minicart")
-                      .classList.toggle("open");
-                  }}
-                  id="cart-quantity"
-                >
-                  {" "}
-                  {cart.length}
-                </div>
-              ) : (
-                <div className="zero">0</div>
-              )}
-
-              <img
-                onClick={() => {
+              <div
+                tabIndex="1"
+                onFocus={() => {
+                  setOpened("selectedcar");
+                  document.getElementById("selectedcar").classList.add("open");
+                }}
+                onBlur={() => {
                   setOpened("selectedcar");
                   document
                     .getElementById("selectedcar")
-                    .classList.toggle("open");
+                    .classList.remove("open");
                 }}
-                alt="cart-icon"
-                className="cart-icon"
-                src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/30/ffffff/external-garage-automobile-kiranshastry-solid-kiranshastry-1.png"
-              />
+              >
+                <img
+                  alt="cart-icon"
+                  className="cart-icon"
+                  src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/30/ffffff/external-garage-automobile-kiranshastry-solid-kiranshastry-1.png"
+                />
+                {carsquantity === 1 ? (
+                  <div id="cars-quantity">{carsquantity}</div>
+                ) : (
+                  <div className="zero"> {carsquantity}</div>
+                )}
 
-              {carsquantity === 1 ? (
-                <div
-                  onClick={() => {
-                    setOpened("selectedcar");
-                    document
-                      .getElementById("selectedcar")
-                      .classList.toggle("open");
-                  }}
-                  id="cars-quantity"
-                >
-                  {carsquantity}
-                </div>
-              ) : (
-                <div className="zero"> {carsquantity}</div>
-              )}
+                <Selectedcar />
+              </div>
 
               <div onClick={hamburgerState} className={"btn " + active}>
                 <span></span>
@@ -116,27 +120,25 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <Minicart />
+          <Searchbar class={searchstate} />
 
-          <Selectedcar />
-        </div>
-      </div>
+          <div className={"links" + active + "-menu"}>
+            <div>
+              <ul>
+                <Link to="/">
+                  <li>Home</li>
+                </Link>
+                <Link to="/store">
+                  <li>Store</li>
+                </Link>
+                <Link to="/cart">
+                  <li>Cart</li>
+                </Link>
 
-      <div className={"links" + active + "-menu"}>
-        <div>
-          <ul>
-            <Link to="/">
-              <li>Home</li>
-            </Link>
-            <Link to="/store">
-              <li>Store</li>
-            </Link>
-            <Link to="/cart">
-              <li>Cart</li>
-            </Link>
-
-            <li>Contacts</li>
-          </ul>
+                <li>Contacts</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </>

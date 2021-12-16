@@ -69,11 +69,10 @@ export default function Selectedcar() {
                 </b>
               </div>
 
-              <Link
+              <div
                 id="cancel-car"
                 onClick={() => {
                   if (localStorage.getItem("selectedCar")) {
-                    localStorage.removeItem("selectedCar");
                     setSelectedcar([
                       {
                         makeID: "",
@@ -96,17 +95,19 @@ export default function Selectedcar() {
                         categoryID: " "
                       }
                     ]);
+                    localStorage.removeItem("selectedCar");
+
                     document
                       .getElementById("selectedcar")
                       .classList.toggle("open");
                     setCarsquantity(0);
                   }
+                  window.location.pathname = "/store";
                 }}
-                to="/store"
               >
                 {" "}
                 Избери друг автомобил
-              </Link>
+              </div>
             </div>
           ) : (
             <div className="no-selected-car"> Няма избран автомобил </div>

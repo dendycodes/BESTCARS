@@ -19,7 +19,7 @@
     flex-direction: row;
 
     width: 100%;
-    background-color: white;
+    // background-color: white;
     height: 800px;
     border-radius: 20px;
     position: relative;
@@ -61,13 +61,13 @@
       border-radius: 0px 30px 30px 0px;
       display: flex;
       align-items: flex-end;
-      justify-content: flex-end;
+      justify-content: space-between;
       flex-direction: column;
       text-align: end;
       .price-container {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
 
         h1 {
           font-size: 40px;
