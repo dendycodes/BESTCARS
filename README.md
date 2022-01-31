@@ -2,7 +2,7 @@
 
 
 
-<img src="https://res.cloudinary.com/bestcar-bg/image/upload/v1637420109/Deniz%20Memduev/299-2996011_monitor-png-ipad-computer-monitors-software-jpg-computer_gwlh5v.png" width="400"  />
+<img src="https://res.cloudinary.com/bestcar-bg/image/upload/v1643662936/Deniz%20Memduev/mac-laptop-png-13_g7avgm.png" width="900"  />
 
 ### The project is under development  !!!
 <hr/>
