@@ -2,7 +2,7 @@
 
 
 
-<img src="https://res.cloudinary.com/bestcar-bg/image/upload/v1643662936/Deniz%20Memduev/mac-laptop-png-13_g7avgm.png" width="900"  />
+<img src="https://res.cloudinary.com/denizmemduev/image/upload/v1643662936/Deniz%20Memduev/mac-laptop-png-13_g7avgm.png" width="900"  />
 
 ### The project is under development  !!!
 <hr/>
