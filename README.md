@@ -10,7 +10,7 @@
 
  
 
- ### Main futures 
+ ### Main functionalities 
 
  -   Easy adding and deleting car from garage.
  -   Searching for auto parts by selected category and car added to garage.
